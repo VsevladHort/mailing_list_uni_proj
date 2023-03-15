@@ -1,0 +1,8 @@
+.dropdown_option:hover {
+    text-underline: blue;
+    color: blue;
+    border-color: blue;
+    background: bisque;
+    border-style: solid;
+    border-width: 1px;
+}
