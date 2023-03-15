@@ -1,0 +1,24 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    title Email CRUD
+    link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous')
+.container
+    h1 Document
+    form#document-form
+        input#document-id(type='hidden' value=doc_id)
+        .form-group
+            label(for='f-name') First Name:
+            input#f-name.form-control(type='text' required='')
+        .form-group
+            label(for='l-name') Last Name:
+            input#l-name.form-control(type='text' required='')
+        .form-group
+            label(for='p-name') Patronymic Name:
+            input#p-name.form-control(type='text' required='')
+        .form-group
+            label(for='email') Email:
+            input#email.form-control(type='email' required='')
+        button.btn.btn-primary(type='submit') Save
+        button#delete-button.btn.btn-danger(type='button') Delete
+script(src='/views/crud_script.js')
