@@ -6,7 +6,7 @@ head
 .container
     h1 Document
     form#document-form
-        input#document-id(type='hidden' value=doc_id)
+        input#document-id(type='hidden' value=null)
         .form-group
             label(for='f-name') First Name:
             input#f-name.form-control(type='text' required='')
@@ -19,7 +19,5 @@ head
         .form-group
             label(for='email') Email:
             input#email.form-control(type='email' required='')
-        button.btn.btn-primary(type='submit') Save
-        a.btn.btn-primary(href='/') Go Back
-        button#delete-button.btn.btn-danger(type='button') Delete
-script(src='/views/crud_script.js')
+        button.btn.btn-primary(type='submit') Create
+script(src='/views/create_script.js')

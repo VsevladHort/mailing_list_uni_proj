@@ -6,7 +6,7 @@ function loadDocument(id) {
     return fetch(`/emails/${id}`)
         .then(function (response) {
             if (!response.ok) {
-                throw new Error('Error loading document: ' + response.statusText);
+                throw new Error('Error loading document: ' + response.body);
             }
             return response.json();
         });
@@ -25,7 +25,7 @@ function saveDocument(id, data) {
     return fetch(`/emails/${id}`, options)
         .then(function (response) {
             if (!response.ok) {
-                throw new Error('Error saving document: ' + response.statusText);
+                throw new Error('Error saving document: ' + response.body);
             }
             return response.json();
         });
@@ -38,7 +38,7 @@ function deleteDocument(id) {
     return fetch(`/emails/${id}`, options)
         .then(function (response) {
             if (!response.ok) {
-                throw new Error('Error deleting document: ' + response.statusText);
+                throw new Error('Error deleting document: ' + response.body);
             }
         });
 }
