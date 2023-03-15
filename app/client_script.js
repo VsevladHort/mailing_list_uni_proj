@@ -7,13 +7,15 @@ const insertDataIntoTable = (data) => {
     documents.innerHTML = '';
     data.forEach(doc => {
         const row = document.createElement('tr');
-        const detailBtn = `<a href=/crud/${doc._id}>interact</a>`
+        const detailBtn = `<a href=/crud/${doc._id}>edit</a>`
+        const sendButton = `<a href=/emails/send/${doc.email}>send</a>`
         row.innerHTML = `
               <td>${doc.f_name}</td>
               <td>${doc.l_name}</td>
               <td>${doc.p_name}</td>
               <td>${doc.email}</td>
               <td>${detailBtn}</td>
+              <td>${sendButton}</td>
             `;
         documents.appendChild(row);
     });
